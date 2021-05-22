@@ -62,35 +62,7 @@
                     android:onClick="onCart"
                     />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:backgroundTint="#fafafa"
-                    android:textColor="#212121"
-                    android:layout_margin="4dp"
-                    android:layout_weight="2"
-                    android:text="1"
-                    />
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:backgroundTint="#fafafa"
-                    android:textColor="#212121"
-                    android:layout_margin="4dp"
-                    android:layout_weight="2"
-                    android:text="2"
-                    android:onClick="onSecond"
-                    />
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:backgroundTint="#fafafa"
-                    android:textColor="#212121"
-                    android:layout_margin="4dp"
-                    android:layout_weight="2"
-                    android:text="3"
-                    android:onClick="onThird"
-                    />
+
 
 
             </LinearLayout>
@@ -113,6 +85,7 @@
                     android:layout_height="wrap_content"
                     android:text="this is first option"
                     android:textColor="#212121"
+                    android:id="@+id/mainText"
                     />
 
 

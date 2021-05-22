@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.TextView;
 
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     class ViewHolder{
 
     }
+
     class Books {
         String name;
         String author;
@@ -23,9 +25,7 @@ public class MainActivity extends AppCompatActivity {
         int isbn;
         String pic;
         String blurb;
-        List<Books> eng  = new ArrayList<>();
-        List<Books> law  = new ArrayList<>();
-        List<Books> med  = new ArrayList<>();
+
         public Books (String name, String author, int viewed, char genre,int id, int isbn, String pic, String blurb){
             this.name = name;
             this.author = author;
@@ -45,9 +45,16 @@ public class MainActivity extends AppCompatActivity {
                 med.add(this);
             }
         }
+        public String getName(){
+            return this.name;
+        }
 
 
     }
+    ArrayList<Books> eng  = new ArrayList<>();
+    ArrayList<Books> law  = new ArrayList<>();
+    ArrayList<Books> med  = new ArrayList<>();
+    ArrayList<Books> search  = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,15 +68,34 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onFirst(View view){
         Intent optionFirst = new Intent(this, OptionFirst.class);
+        optionFirst.putExtra("toDisplay", eng);
         startActivity(optionFirst);
     }
     public void onSecond(View view){
-        Intent optionSecond = new Intent(this, OptionSecond.class);
-        startActivity(optionSecond);
+        Intent optionFirst = new Intent(this, OptionFirst.class);
+        optionFirst.putExtra("toDisplay", law);
+        startActivity(optionFirst);
     }
     public void onThird(View view){
-        Intent optionThird = new Intent(this, OptionThird.class);
-        startActivity(optionThird);
+        Intent optionFirst = new Intent(this, OptionFirst.class);
+        optionFirst.putExtra("toDisplay", med);
+        startActivity(optionFirst);
+    }
+
+    public void searchBook (String searchTerm){
+        search.clear();
+        for (Books book: eng){
+            if (nameMatch(book.getName(),searchTerm)){
+                search.add(book);
+            }
+        }
+    }
+
+    public boolean nameMatch(String name,String search){
+        if (name.contains(search)){
+            return true;
+        }
+        return false;
     }
 
 
