@@ -89,17 +89,17 @@
                         android:text="this is the home screen"
                         android:textColor="#212121"
                         />
+
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:backgroundTint="#EEEEEE"
-                        android:textColor="#212121"
                         android:layout_margin="20dp"
                         android:layout_weight="2"
-                        android:text="Engineering"
-                        android:onClick="onFirst"
+                        android:backgroundTint="#EEEEEE"
                         android:elevation="8dp"
-                        />
+                        android:onClick="onFirst"
+                        android:text="Engineering"
+                        android:textColor="#212121" />
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
