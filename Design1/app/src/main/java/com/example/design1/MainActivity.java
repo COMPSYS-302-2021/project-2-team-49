@@ -1,11 +1,13 @@
 package com.example.design1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -27,8 +29,16 @@ class Books {
         this.pic = pic;
         this.id = id;
     }
-    public String getName(){
+    public String getTitle(){
         return this.name;
+    }
+
+    public String getAuthor(){
+        return this.author;
+    }
+
+    public int getID(){
+        return Integer.parseInt(this.id);
     }
 }
 
@@ -62,7 +72,7 @@ class BookProvider{
     static ArrayList<Books> med  = new ArrayList<>();
     static ArrayList<Books> search  = new ArrayList<>();
 
-    public void  generateData() {
+    public static void  generateData() {
         for (int i = 0; i < 30; i++) {
             String id = ids[i];
             String author = authors[i];
@@ -90,12 +100,25 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public static final String BOOK_DETAIL_KEY = "book";
+    ListView lvBooks;
+    BookAdapter bookAdapter;
+    ArrayList<Books> eng,med,law;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ArrayList<Books> aBooks = new ArrayList<Books>();
+        aBooks.addAll(eng);
+        aBooks.addAll(med);
+        aBooks.addAll(law);
+        bookAdapter = new BookAdapter(this, aBooks);
+        lvBooks.setAdapter(bookAdapter);
+        LinearLayoutManager lm = new LinearLayoutManager(this);
+
+
     }
 
     public void onCart(View view){
@@ -121,17 +144,17 @@ public class MainActivity extends AppCompatActivity {
     public void searchBook (String searchTerm){
         BookProvider.search.clear();
         for (Books book: BookProvider.eng){
-            if (nameMatch(book.getName(),searchTerm)){
+            if (nameMatch(book.getTitle(),searchTerm)){
                 BookProvider.search.add(book);
             }
         }
         for (Books book: BookProvider.med){
-            if (nameMatch(book.getName(),searchTerm)){
+            if (nameMatch(book.getTitle(),searchTerm)){
                 BookProvider.search.add(book);
             }
         }
         for (Books book: BookProvider.law){
-            if (nameMatch(book.getName(),searchTerm)){
+            if (nameMatch(book.getTitle(),searchTerm)){
                 BookProvider.search.add(book);
             }
         }
