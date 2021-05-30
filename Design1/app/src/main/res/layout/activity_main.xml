@@ -96,6 +96,7 @@
                     >
 
                     <Button
+                        android:id="@+id/btnEngList"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_margin="20dp"
@@ -105,28 +106,30 @@
                         android:onClick="onFirst"
                         android:text="Engineering"
                         android:textColor="#212121" />
+
                     <Button
+                        android:id="@+id/btnLawList"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:backgroundTint="#EEEEEE"
-                        android:textColor="#212121"
                         android:layout_margin="20dp"
                         android:layout_weight="2"
-                        android:text="Law"
+                        android:backgroundTint="#EEEEEE"
+                        android:elevation="8dp"
                         android:onClick="onSecond"
-                        android:elevation="8dp"
-                        />
+                        android:text="Law"
+                        android:textColor="#212121" />
+
                     <Button
+                        android:id="@+id/btnMedList"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:backgroundTint="#EEEEEE"
-                        android:textColor="#212121"
                         android:layout_margin="20dp"
                         android:layout_weight="2"
-                        android:text="Medicine"
-                        android:onClick="onThird"
+                        android:backgroundTint="#EEEEEE"
                         android:elevation="8dp"
-                        />
+                        android:onClick="onThird"
+                        android:text="Medicine"
+                        android:textColor="#212121" />
 
 
 
