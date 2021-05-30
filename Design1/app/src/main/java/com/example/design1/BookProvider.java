@@ -31,24 +31,26 @@ public class BookProvider {
     static ArrayList<Books> search = new ArrayList<>();
 
     public static void generateData() {
-        for (int i = 0; i < 30; i++) {
-            String id = ids[i];
-            String author = authors[i];
-            String title = titles[i];
-            int coveraddr = coveraddrs[0];
-            int views = 5;
-            if (i < 10) {
-                Books aBook = new Books(title, author, views, 'e', id, coveraddr);
-                eng.add(aBook);
-            } else if (i < 20) {
-                Books aBook = new Books(title, author, views, 'm', id, coveraddr);
-                med.add(aBook);
-            } else {
-                Books aBook = new Books(title, author, views, 'l', id, coveraddr);
-                law.add(aBook);
+        if (eng.isEmpty() && med.isEmpty() && law.isEmpty()) {
+            for (int i = 0; i < 30; i++) {
+                String id = ids[i];
+                String author = authors[i];
+                String title = titles[i];
+                int coveraddr = coveraddrs[0];
+                int views = 5;
+                if (i < 10) {
+                    Books aBook = new Books(title, author, views, 'e', id, coveraddr);
+                    eng.add(aBook);
+                } else if (i < 20) {
+                    Books aBook = new Books(title, author, views, 'm', id, coveraddr);
+                    med.add(aBook);
+                } else {
+                    Books aBook = new Books(title, author, views, 'l', id, coveraddr);
+                    law.add(aBook);
+                }
+
+
             }
-
-
         }
     }
 }

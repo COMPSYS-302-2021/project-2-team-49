@@ -29,7 +29,7 @@ public class OptionFirst extends AppCompatActivity {
 
     String displayType;
     ArrayList<Books> booksToDisplay  = new ArrayList<>();
-    ArrayList<Books> eng, med, law;
+    ArrayList<Books> eng;
     BookAdapter bookAdapter, currentAdapter;
     ListView lvBooks;
 
@@ -42,13 +42,9 @@ public class OptionFirst extends AppCompatActivity {
         Intent thisIntent = getIntent();
         BookProvider.generateData();
         eng = BookProvider.eng;
-        med = BookProvider.med;
-        law = BookProvider.law;
 
-        ArrayList<Books> aBooks = new ArrayList<Books>();
-        aBooks.addAll(eng);
-        aBooks.addAll(med);
-        aBooks.addAll(law);
+        ArrayList<Books> aBooks = eng;
+
         bookAdapter = new BookAdapter(this, aBooks);
         lvBooks = (ListView)findViewById(R.id.lViewBooks);
         lvBooks.setAdapter(bookAdapter);
@@ -63,19 +59,6 @@ public class OptionFirst extends AppCompatActivity {
     public void onHome(View view) {
         Intent mainActivity = new Intent(this, MainActivity.class);
         startActivity(mainActivity);
-    }
-
-    public void displayEngineering(){
-
-    }
-    public void displayLaw(){
-
-    }
-    public void displayMed(){
-
-    }
-    public void displaySearch(){
-
     }
 
     public void onCart(View view) {

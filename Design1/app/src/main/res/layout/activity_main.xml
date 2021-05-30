@@ -19,6 +19,18 @@
             android:layout_height="0dp"
             android:layout_weight="1">
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:text="Second Hand Textbooks"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="38dp" />
+
         </LinearLayout>
 
         <LinearLayout

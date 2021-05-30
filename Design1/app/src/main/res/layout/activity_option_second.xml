@@ -4,126 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OptionSecond">
-
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#212121"
-    android:orientation="vertical">
+    android:background="#FFFFFF"
+    tools:context=".OptionFirst">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="match_parent"
+        android:background="#212121"
+        android:orientation="vertical">
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:layout_weight="9"
-        >
-
-        <ScrollView
-            android:layout_height="match_parent"
-            android:layout_width="0dp"
-            android:background="#212121"
-            android:layout_weight="2">
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="#212121"
-                android:orientation="vertical"
-                android:elevation="10dp"
-                >
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:backgroundTint="#fafafa"
-                    android:textColor="#212121"
-                    android:layout_margin="4dp"
-                    android:layout_weight="2"
-                    android:padding="4dp"
-                    android:text="home"
-                    android:onClick="onHome"
-                    />
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:backgroundTint="#fafafa"
-                    android:textColor="#212121"
-                    android:layout_margin="4dp"
-                    android:layout_weight="2"
-                    android:padding="4dp"
-                    android:text="cart"
-                    android:onClick="onCart"
-                    />
+                android:layout_weight="1"
+                android:text="Law Textbooks"
+                android:textColor="@color/white"
+                android:fontFamily="cursive"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="32dp"/>
+        </LinearLayout>
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:backgroundTint="#fafafa"
-                    android:textColor="#212121"
-                    android:layout_margin="4dp"
-                    android:layout_weight="2"
-                    android:text="1"
-                    android:onClick="onFirst"
-                    />
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:backgroundTint="#fafafa"
-                    android:textColor="#212121"
-                    android:layout_margin="4dp"
-                    android:layout_weight="2"
-                    android:text="2"
-                    />
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:backgroundTint="#fafafa"
-                    android:textColor="#212121"
-                    android:layout_margin="4dp"
-                    android:layout_weight="2"
-                    android:text="3"
-                    android:onClick="onThird"
-                    />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:orientation="horizontal">
 
-
-
-            </LinearLayout>
-        </ScrollView>
-
-        <ScrollView
-            android:layout_height="match_parent"
-            android:layout_width="0dp"
-            android:layout_alignParentRight="true"
-            android:background="#fafafa"
-            android:layout_weight="8">
-
-            <LinearLayout
+            <ScrollView
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                >
-                <TextView
-                    android:id="@+id/mainText"
+                android:layout_weight="2"
+                android:background="#212121">
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="this is second option"
-                    android:textColor="#212121"
-                    />
+                    android:layout_height="match_parent"
+                    android:background="#212121"
+                    android:elevation="10dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="4dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="#fafafa"
+                        android:onClick="onHome"
+                        android:padding="4dp"
+                        android:text="home"
+                        android:textColor="#212121" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="4dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="#fafafa"
+                        android:onClick="onCart"
+                        android:padding="4dp"
+                        android:text="cart"
+                        android:textColor="#212121" />
 
 
+                </LinearLayout>
+            </ScrollView>
 
-            </LinearLayout>
-        </ScrollView>
+            <ListView
+                android:id="@+id/lViewBooks"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_weight="8"
+                android:background="#fafafa" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
