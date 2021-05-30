@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -20,6 +21,8 @@ import java.util.List;
 
 
 public class OptionFirst extends AppCompatActivity {
+
+    public static final String BOOKS_DETAIL_KEY = "books";
 
     String displayType;
     ArrayList<Books> booksToDisplay  = new ArrayList<>();
@@ -48,6 +51,7 @@ public class OptionFirst extends AppCompatActivity {
         lvBooks.setAdapter(bookAdapter);
         LinearLayoutManager lm = new LinearLayoutManager(this);
 
+        setupBookSelectedListener();
 
 
     }
@@ -72,5 +76,16 @@ public class OptionFirst extends AppCompatActivity {
     public void onCart(View view) {
         Intent cart = new Intent(this, Cart.class);
         startActivity(cart);
+    }
+
+    public void setupBookSelectedListener(){
+        lvBooks.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(OptionFirst.this, BookDetailedActivity.class);
+                intent.putExtra(BOOKS_DETAIL_KEY, bookAdapter.getItem(position));
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -22,7 +22,7 @@ import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String BOOK_DETAIL_KEY = "book";
+    public static final String BOOKS_DETAIL_KEY = "books";
     ListView lvBooks;
     BookAdapter bookAdapter;
     ArrayList<Books> eng,med,law;
@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
     public void onFirst(View view){
         Intent optionFirst = new Intent(this, OptionFirst.class);
         optionFirst.putExtra("toDisplay", BookProvider.eng);
-        setContentView(R.layout.option_first);
         startActivity(optionFirst);
     }
     public void onSecond(View view){
@@ -69,32 +68,4 @@ public class MainActivity extends AppCompatActivity {
         optionFirst.putExtra("toDisplay", BookProvider.med);
         startActivity(optionFirst);
     }
-
-    public void searchBook (String searchTerm){
-        BookProvider.search.clear();
-        for (Books book: BookProvider.eng){
-            if (nameMatch(book.getTitle(),searchTerm)){
-                BookProvider.search.add(book);
-            }
-        }
-        for (Books book: BookProvider.med){
-            if (nameMatch(book.getTitle(),searchTerm)){
-                BookProvider.search.add(book);
-            }
-        }
-        for (Books book: BookProvider.law){
-            if (nameMatch(book.getTitle(),searchTerm)){
-                BookProvider.search.add(book);
-            }
-        }
-    }
-
-    public boolean nameMatch(String name,String search){
-        if (name.contains(search)){
-            return true;
-        }
-        return false;
-    }
-
-
 }
