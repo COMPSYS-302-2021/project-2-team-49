@@ -6,38 +6,47 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
-            android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
+
             <ImageView
                 android:id="@+id/ivBookCover"
-                android:layout_marginTop="8dp"
                 android:layout_width="280dp"
-                android:layout_height="280dp" />
+                android:layout_height="280dp"
+                android:layout_marginTop="8dp" />
+
             <TextView
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="32sp"
                 android:layout_marginTop="8dp"
                 android:paddingLeft="10dp"
-                android:paddingRight="10dp" />
+                android:paddingRight="10dp"
+                android:textSize="32sp" />
+
             <TextView
                 android:id="@+id/tvAuthor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="22sp"
-                android:layout_marginTop="8dp" />
-            <View
-                android:background="@android:color/darker_gray"
-                android:layout_width="280dp"
-                android:layout_height="1px"
-                android:layout_marginTop="8dp" />
+                android:layout_marginTop="8dp"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/textViewBlurb"
+                android:layout_width="310dp"
+                android:layout_height="310dp"
+                android:text="
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare bibendum nisl, ac sagittis libero gravida vitae. Sed quis blandit sapien. Pellentesque luctus magna mi, non bibendum est euismod non. Morbi sed turpis diam. Vivamus mollis justo quis urna gravida, et volutpat urna lobortis. Ut accumsan elementum lacinia. Curabitur finibus."
+                android:layout_marginTop="24dp"
+                android:textSize="22dp"/>
 
         </LinearLayout>
     </ScrollView>

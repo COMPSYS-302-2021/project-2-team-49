@@ -11,6 +11,7 @@ public class BookDetailedActivity extends AppCompatActivity {
     private ImageView ivBookCover;
     private TextView tvTitle;
     private TextView tvAuthor;
+    private TextView tvBlurb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,7 @@ public class BookDetailedActivity extends AppCompatActivity {
         ivBookCover = (ImageView) findViewById(R.id.ivBookCover);
         tvTitle = (TextView) findViewById(R.id.tvTitle);
         tvAuthor = (TextView) findViewById(R.id.tvAuthor);
+        tvBlurb = (TextView) findViewById(R.id.textViewBlurb);
         Intent thisIntent = getIntent();
         // Use the book to populate the data into our views
         Books book = (Books) thisIntent.getSerializableExtra(MainActivity.BOOKS_DETAIL_KEY);
