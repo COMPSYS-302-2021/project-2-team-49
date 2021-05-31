@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onCart(View view){
-        Intent cart = new Intent(this, Cart.class);
+        Intent cart = new Intent(this, ScreenSlideActivity.class);
         startActivity(cart);
     }
     public void onFirst(View view){
@@ -47,11 +47,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(optionFirst, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
     }
     public void onSecond(View view){
-        Intent optionFirst = new Intent(this, OptionSecond.class);
-        startActivity(optionFirst, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+        Intent optionSecond = new Intent(this, OptionSecond.class);
+        startActivity(optionSecond, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
     }
     public void onThird(View view){
-        Intent optionFirst = new Intent(this, OptionThird.class);
-        startActivity(optionFirst, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+        Intent optionThird = new Intent(this, OptionThird.class);
+        startActivity(optionThird, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
     }
 }

@@ -6,21 +6,26 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
 
 public class BookDetailedActivity extends AppCompatActivity {
     private ImageView ivBookCover;
     private TextView tvTitle;
     private TextView tvAuthor;
     private TextView tvBlurb;
+    private ViewPager2 vp;
+    private ScreenSlidePageFragment p1, p2, p3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_detailed);
-        ivBookCover = (ImageView) findViewById(R.id.ivBookCover);
+        //ivBookCover = (ImageView) findViewById(R.id.ivBookCover);
         tvTitle = (TextView) findViewById(R.id.tvTitle);
         tvAuthor = (TextView) findViewById(R.id.tvAuthor);
         tvBlurb = (TextView) findViewById(R.id.textViewBlurb);
+        vp = (ViewPager2) findViewById(R.id.pager);
+
         Intent thisIntent = getIntent();
         // Use the book to populate the data into our views
         Books book = (Books) thisIntent.getSerializableExtra(MainActivity.BOOKS_DETAIL_KEY);
@@ -34,6 +39,6 @@ public class BookDetailedActivity extends AppCompatActivity {
         //String mDrawableName = book.getCover();
         //int resID = getResources().getIdentifier(mDrawableName ,"drawable", getPackageName());
         int resID = book.getCoverImage();
-        ivBookCover.setImageResource(resID);
+        //ivBookCover.setImageResource(resID);
     }
 }
