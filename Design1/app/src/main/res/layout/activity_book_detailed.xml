@@ -23,6 +23,8 @@
                 android:layout_height="280dp"
                 android:layout_marginTop="8dp" />
 
+
+
             <TextView
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
@@ -38,15 +40,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:textSize="22sp" />
-
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
             <TextView
                 android:id="@+id/textViewBlurb"
-                android:layout_width="310dp"
-                android:layout_height="310dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:text="
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare bibendum nisl, ac sagittis libero gravida vitae. Sed quis blandit sapien. Pellentesque luctus magna mi, non bibendum est euismod non. Morbi sed turpis diam. Vivamus mollis justo quis urna gravida, et volutpat urna lobortis. Ut accumsan elementum lacinia. Curabitur finibus."
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare bibendum nisl, ac sagittis libero gravida vitae. Sed quis blandit sapien. Pellentesque luctus magna mi, non bibendum est euismod non. Morbi sed turpis diam. Vivamus mollis justo quis urna gravida, et volutpat urna lobortis. Ut accumsan elementum lacinia. Curabitur finibus. AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
                 android:layout_marginTop="24dp"
-                android:textSize="22dp"/>
+                android:textSize="22dp" />
+            </ScrollView>
 
         </LinearLayout>
     </ScrollView>

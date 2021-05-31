@@ -29,7 +29,7 @@
                 android:text="Second Hand Textbooks"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="38dp" />
+                android:textSize="24dp" />
 
         </LinearLayout>
 
