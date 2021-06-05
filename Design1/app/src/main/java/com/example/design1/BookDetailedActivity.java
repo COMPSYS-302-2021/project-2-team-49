@@ -36,9 +36,9 @@ public class BookDetailedActivity extends AppCompatActivity {
         this.setTitle(book.getTitle());
         tvTitle.setText(book.getTitle());
         tvAuthor.setText(book.getAuthor());
-        //String mDrawableName = book.getCover();
+        //String mDrawableName = book.getCoverImage();
         //int resID = getResources().getIdentifier(mDrawableName ,"drawable", getPackageName());
-        int resID = book.getCoverImage();
+        //int resID = book.getCoverImage();
         //ivBookCover.setImageResource(resID);
     }
 }

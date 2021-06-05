@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onCart(View view){
-        Intent cart = new Intent(this, ScreenSlideActivity.class);
+        Intent cart = new Intent(this, ScreenSlidePagerActivity.class);
         startActivity(cart);
     }
     public void onFirst(View view){
