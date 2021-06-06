@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onCart(View view){
-        Intent cart = new Intent(this, DetailedPagerActivity.class);
+        Intent cart = new Intent(this, ViewPagerActivity.class);
         startActivity(cart);
     }
     public void onFirst(View view){

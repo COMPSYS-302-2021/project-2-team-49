@@ -14,7 +14,6 @@ public class BookDetailedActivity extends AppCompatActivity {
     private TextView tvAuthor;
     private TextView tvBlurb;
     private ViewPager2 vp;
-    private DetailedPagerView p1, p2, p3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
