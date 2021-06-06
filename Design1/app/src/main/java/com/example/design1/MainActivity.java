@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Window thisWindow;
     private ViewPager2 viewPager;
     private ViewPagerAdapter vpAdapter;
-    int[] featuredCovers = {};
+    int[] featuredCovers = {R.drawable.e001, R.drawable.l022, R.drawable.m019, R.drawable.m220, R.drawable.e006};
     String[] featuredText = {};
 
     @Override
