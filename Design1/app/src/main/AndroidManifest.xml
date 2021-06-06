@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design1">
-        <activity android:name=".ScreenSlidePagerActivity" />
+        <activity android:name=".DetailedPagerActivity" />
         <activity android:name=".BookDetailedActivity" />
         <activity android:name=".OptionThird" />
         <activity android:name=".OptionSecond" />
