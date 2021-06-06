@@ -29,7 +29,7 @@
                 android:text="Second Hand Textbooks"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24dp" />
+                android:textSize="26sp" />
 
         </LinearLayout>
 
@@ -95,12 +95,41 @@
                     android:orientation="vertical"
                     >
 
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:text="Featured Books"
+                        android:fontFamily="cursive"
+                        android:textSize="22sp"/>
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/vpFeatured"
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        android:layout_weight="0" >
+                    </androidx.viewpager2.widget.ViewPager2>
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="List Books by Genre"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:fontFamily="cursive"
+                        android:textSize="22sp"
+                        />
+
                     <Button
                         android:id="@+id/btnEngList"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_margin="20dp"
-                        android:layout_weight="2"
+                        android:layout_weight="3"
                         android:backgroundTint="#EEEEEE"
                         android:elevation="8dp"
                         android:onClick="onFirst"
@@ -112,7 +141,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_margin="20dp"
-                        android:layout_weight="2"
+                        android:layout_weight="3"
                         android:backgroundTint="#EEEEEE"
                         android:elevation="8dp"
                         android:onClick="onSecond"
@@ -124,7 +153,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_margin="20dp"
-                        android:layout_weight="2"
+                        android:layout_weight="3"
                         android:backgroundTint="#EEEEEE"
                         android:elevation="8dp"
                         android:onClick="onThird"

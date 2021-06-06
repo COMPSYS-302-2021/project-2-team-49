@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImageView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/vpBookCover"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:padding="6dp"
-    android:scaleType="fitCenter">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="5dp"
+    android:elevation="10dp"
+    app:cardBackgroundColor="#ebfffb"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <ImageView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/vpBookCover"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:padding="6dp"
+        android:scaleType="fitCenter">
 
-</ImageView>
+    </ImageView>
+</androidx.cardview.widget.CardView>

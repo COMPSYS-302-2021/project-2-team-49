@@ -12,11 +12,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.ViewHolder> {
     int[] imageIDs;
+    String[] textArray;
     boolean imageOnly;
 
-    public ViewPagerAdapter(int[] imageIDs, boolean imageOnly) {
+    public ViewPagerAdapter(int[] imageIDs, boolean imageOnly, String[] textArray) {
         this.imageIDs = imageIDs;
         this.imageOnly = imageOnly;
+        this.textArray = textArray;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
@@ -49,7 +51,7 @@ public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.View
         holder.vpIm.setBackgroundResource(imageIDs[position]);
 
         if (!imageOnly) {
-            holder.vpTxt.setText("Test Text");
+            holder.vpTxt.setText(textArray[position]);
         }
     }
 

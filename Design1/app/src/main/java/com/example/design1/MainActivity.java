@@ -1,6 +1,7 @@
 package com.example.design1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
@@ -14,6 +15,10 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String BOOKS_DETAIL_KEY = "books";
     Window thisWindow;
+    private ViewPager2 viewPager;
+    private ViewPagerAdapter vpAdapter;
+    int[] featuredCovers = {};
+    String[] featuredText = {};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setEnterTransition(new Slide());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //vpAdapter = new ViewPagerAdapter();
     }
 
     public void onCart(View view){

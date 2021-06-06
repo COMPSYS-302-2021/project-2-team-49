@@ -16,7 +16,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:orientation="vertical">
 
                         <ImageView
@@ -26,25 +25,22 @@
                             android:layout_marginLeft="16dp"
                             android:layout_marginRight="16dp"
                             android:padding="6dp"
+                            android:layout_weight="1"
                             android:scaleType="fitCenter"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/vpTextBox"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Look at all that text"
-                            android:textSize="50dp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textSize="20sp"
                             android:layout_marginLeft="16dp"
                             android:layout_marginRight="16dp"
                             android:padding="6dp"
-                            android:scaleType="fitCenter"/>
+                            android:layout_weight="3"
+                            android:scaleType="fitCenter"
+                            />
                 </LinearLayout>
         </androidx.cardview.widget.CardView>
 </LinearLayout>

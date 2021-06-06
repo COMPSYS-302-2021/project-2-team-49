@@ -39,7 +39,7 @@ public class BookDetailedActivity extends AppCompatActivity {
         loadBook(book);
 
         //sets vpAdapter and ensures adjacent pages are rendered for previews
-        vpAdapter = new ViewPagerAdapter(coverImages, true);
+        vpAdapter = new ViewPagerAdapter(coverImages, true, null);
         viewPager.setOffscreenPageLimit(1);
         viewPager.setAdapter(vpAdapter);
 
