@@ -18,8 +18,9 @@
 
             <androidx.viewpager2.widget.ViewPager2 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/pager"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_width="256dp"
+                android:layout_height="256dp"
+                android:layout_marginTop="52dp"/>
 
 
             <TextView

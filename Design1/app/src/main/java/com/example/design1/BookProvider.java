@@ -60,7 +60,7 @@ public class BookProvider {
             "George Paul Sutton",
             "Thomas J. Pence, Indrek S. Wichman",
             "Walter Dean Myers",
-            "Jane Austen",
+            "Sang C. Suh, Varadraj Gurupur",
 
             "Douglas P. Zipes MD",
             "Kent Pinkerton & Richard Harding",
@@ -126,17 +126,17 @@ public class BookProvider {
 
     };
     //image path of book covers in the drawable folder
-    static int[] coveraddrs1 = {R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001,
-                                R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001,
-                                R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001};
+    static int[] coveraddrs1 = {R.drawable.e001, R.drawable.e002, R.drawable.e003, R.drawable.e004, R.drawable.e005, R.drawable.e006, R.drawable.e007, R.drawable.e008, R.drawable.e009, R.drawable.e010,
+                                R.drawable.m011, R.drawable.m012, R.drawable.m013, R.drawable.m014, R.drawable.m015, R.drawable.m016, R.drawable.m017, R.drawable.m018, R.drawable.m019, R.drawable.m020,
+                                R.drawable.l021, R.drawable.l022, R.drawable.l023, R.drawable.l024, R.drawable.l025, R.drawable.l026, R.drawable.l027, R.drawable.l028, R.drawable.l029, R.drawable.l030};
 
-    static int[] coveraddrs2 = {R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001,
-                                R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001,
-                                R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001};
+    static int[] coveraddrs2 = {R.drawable.e101, R.drawable.e102, R.drawable.e103, R.drawable.e104, R.drawable.e105, R.drawable.e106, R.drawable.e107, R.drawable.e108, R.drawable.e109, R.drawable.e110,
+                                R.drawable.m111, R.drawable.m112, R.drawable.m113, R.drawable.m114, R.drawable.m115, R.drawable.m116, R.drawable.m117, R.drawable.m118, R.drawable.m119, R.drawable.m120,
+                                R.drawable.l121, R.drawable.l122, R.drawable.l123, R.drawable.l124, R.drawable.l125, R.drawable.l126, R.drawable.l127, R.drawable.l128, R.drawable.l129, R.drawable.l130};
 
-    static int[] coveraddrs3 = {R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001,
-                                R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001,
-                                R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001};
+    static int[] coveraddrs3 = {R.drawable.e201, R.drawable.e202, R.drawable.e203, R.drawable.e204, R.drawable.e205, R.drawable.e206, R.drawable.e207, R.drawable.e208, R.drawable.e209, R.drawable.e210,
+                                R.drawable.m211, R.drawable.m212, R.drawable.m213, R.drawable.m214, R.drawable.m215, R.drawable.m216, R.drawable.m217, R.drawable.m218, R.drawable.m219, R.drawable.m220,
+                                R.drawable.l221, R.drawable.l222, R.drawable.l223, R.drawable.l224, R.drawable.l225, R.drawable.l226, R.drawable.l227, R.drawable.l228, R.drawable.l229, R.drawable.l230};
 
     static ArrayList<Books> eng = new ArrayList<>();
     static ArrayList<Books> law = new ArrayList<>();
