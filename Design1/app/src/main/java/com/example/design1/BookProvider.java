@@ -44,7 +44,7 @@ public class BookProvider {
             "021", "022", "023", "024", "025", "026", "027",
             "028", "029", "030"};
 
-    static int[] cost = {
+    static int[] costs = {
             10, 75, 10, 25, 15, 50, 67, 10, 90, 45,
             10, 75, 10, 25, 15, 50, 67, 10, 90, 45,
             10, 75, 10, 25, 15, 50, 0, 10, 90, 45
@@ -126,34 +126,45 @@ public class BookProvider {
 
     };
     //image path of book covers in the drawable folder
-    static int[] coveraddrs = {R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001,};
+    static int[] coveraddrs1 = {R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001,
+                                R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001,
+                                R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001};
+
+    static int[] coveraddrs2 = {R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001,
+                                R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001,
+                                R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001};
+
+    static int[] coveraddrs3 = {R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001,
+                                R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001,
+                                R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001, R.drawable.b001};
+
     static ArrayList<Books> eng = new ArrayList<>();
     static ArrayList<Books> law = new ArrayList<>();
     static ArrayList<Books> med = new ArrayList<>();
-    static ArrayList<Books> search = new ArrayList<>();
 
     public static void generateData() {
         if (eng.isEmpty() && med.isEmpty() && law.isEmpty()) {
             for (int i = 0; i < 30; i++) {
+                //Book info assignment
                 String id = ids[i];
                 String author = authors[i];
                 String title = titles[i];
-                String description = blurbs[i];
-                int price = cost[i];
-                int coveraddr = coveraddrs[0];
+                int cost = costs[i];
+                String blurb = blurbs[i];
+                int coveraddr[] = {coveraddrs1[i], coveraddrs2[i], coveraddrs3[i]};
                 int views = 5;
+
+
                 if (i < 10) {
-                    Books aBook = new Books(title, author, views, 'e', id, coveraddr,description,price);
+                    Books aBook = new Books(title, author, views, 'e', id, cost, blurb, coveraddr);
                     eng.add(aBook);
                 } else if (i < 20) {
-                    Books aBook = new Books(title, author, views, 'm', id, coveraddr,description,price);
+                    Books aBook = new Books(title, author, views, 'm', id, cost, blurb, coveraddr);
                     med.add(aBook);
                 } else {
-                    Books aBook = new Books(title, author, views, 'l', id, coveraddr,description,price);
+                    Books aBook = new Books(title, author, views, 'l', id, cost, blurb, coveraddr);
                     law.add(aBook);
                 }
-
-
             }
         }
     }

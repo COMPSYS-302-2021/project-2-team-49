@@ -1,26 +1,13 @@
 package com.example.design1;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-import androidx.core.view.MenuItemCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.transition.Slide;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.ListView;
-
-
-import java.util.ArrayList;
-import java.util.Scanner;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -39,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onCart(View view){
-        Intent cart = new Intent(this, ScreenSlideActivity.class);
+        Intent cart = new Intent(this, ViewPagerActivity.class);
         startActivity(cart);
     }
     public void onFirst(View view){

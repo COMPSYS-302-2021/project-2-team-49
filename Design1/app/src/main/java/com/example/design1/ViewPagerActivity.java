@@ -1,47 +1,37 @@
 package com.example.design1;
 
-import android.content.Intent;
+import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
+import androidx.annotation.DimenRes;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.CompositePageTransformer;
+import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
-public class BookDetailedActivity extends AppCompatActivity {
-    private ImageView ivBookCover;
-    private TextView tvTitle, tvAuthor, tvBlurb, tvCost, tvID;
-    private int[] coverImages;
-    private ViewPager2 viewPager;
-    private ViewPagerAdapter vpAdapter;
+public class ViewPagerActivity extends AppCompatActivity {
+    ViewPager2 vpHoriz;
+    int[] imageIDs = {R.drawable.b001, R.drawable.b001, R.drawable.b001};
+    ViewPagerAdapter vpAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_book_detailed);
-        //ivBookCover = (ImageView) findViewById(R.id.ivBookCover);
-        tvTitle = (TextView) findViewById(R.id.tvTitle);
-        tvAuthor = (TextView) findViewById(R.id.tvAuthor);
-        tvBlurb = (TextView) findViewById(R.id.tvBlurb);
-        tvCost = (TextView) findViewById(R.id.tvCost);
-        tvID = (TextView) findViewById(R.id.tvID);
-        viewPager = (ViewPager2) findViewById(R.id.pager);
+        setContentView(R.layout.activity_pager_test);
 
-        Intent thisIntent = getIntent();
-        // Use the book to populate the data into our views
-        Books book = (Books) thisIntent.getSerializableExtra(MainActivity.BOOKS_DETAIL_KEY);
-        loadBook(book);
-
-        //sets vpAdapter and ensures adjacent pages are rendered for previews
-        vpAdapter = new ViewPagerAdapter(coverImages, true);
-        viewPager.setOffscreenPageLimit(1);
-        viewPager.setAdapter(vpAdapter);
+        //Assigns vpHoriz to correct element, sets vpAdapter
+        vpHoriz = findViewById(R.id.vpHoriz);
+        vpAdapter = new ViewPagerAdapter(imageIDs, false);
+        vpHoriz.setOffscreenPageLimit(1);
+        vpHoriz.setAdapter(vpAdapter);
 
         //Set values for image margins to make things look nice
         float nextItemDist = convDpToPx(26f);
@@ -60,26 +50,11 @@ public class BookDetailedActivity extends AppCompatActivity {
         });
 
         //set transformer and item decoration
-        viewPager.setPageTransformer(transformer);
-        RecyclerView.ItemDecoration buffer = new BookDetailedActivity.HorizMarginBuffer((int) convDpToPx(32f));
-        viewPager.addItemDecoration(buffer);
+        vpHoriz.setPageTransformer(transformer);
+        RecyclerView.ItemDecoration buffer = new HorizMarginBuffer((int) convDpToPx(32f));
+        vpHoriz.addItemDecoration(buffer);
     }
-    private void loadBook(Books book) {
-        //Loads data from book into relevant fields on the screen
-        this.setTitle(book.getTitle());
-        tvTitle.setText(book.getTitle());
-        tvAuthor.setText(book.getAuthor());
-        tvBlurb.setText(book.getBlurb());
 
-        String costText = "Price: $";
-        costText = costText.concat(Integer.toString(book.getCost()));
-        tvCost.setText(costText);
-
-        String idText = "Book ID: ";
-        idText = idText.concat(book.getBookID());
-        tvID.setText(idText);
-        coverImages = book.getCoverImages();
-    }
     // Class for adding horizontal margin to ViewPager items, otherwise items overlap visually
     private class HorizMarginBuffer extends RecyclerView.ItemDecoration {
         int marginSize;
