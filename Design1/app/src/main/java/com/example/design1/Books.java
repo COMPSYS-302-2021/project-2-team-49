@@ -39,9 +39,9 @@ public class Books implements Serializable {
 
     public char getGenre() {return genre;}
 
-    public String getId() {return id;}
+    public String getBookID() {return id;}
 
-    public int[] getCoverImage() {
+    public int[] getCoverImages() {
         return pic;
     }
 }

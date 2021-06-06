@@ -29,7 +29,7 @@ public class ViewPagerActivity extends AppCompatActivity {
 
         //Assigns vpHoriz to correct element, sets vpAdapter
         vpHoriz = findViewById(R.id.vpHoriz);
-        vpAdapter = new ViewPagerAdapter(imageIDs);
+        vpAdapter = new ViewPagerAdapter(imageIDs, false);
         vpHoriz.setOffscreenPageLimit(1);
         vpHoriz.setAdapter(vpAdapter);
 

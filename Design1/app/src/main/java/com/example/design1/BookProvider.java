@@ -165,8 +165,6 @@ public class BookProvider {
                     Books aBook = new Books(title, author, views, 'l', id, cost, blurb, coveraddr);
                     law.add(aBook);
                 }
-
-
             }
         }
     }
