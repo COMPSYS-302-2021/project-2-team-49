@@ -9,8 +9,10 @@ public class Books implements Serializable {
     char genre;
     String id;
     int pic;
+    String blurb;
+    int cost;
 
-    public Books(String name, String author, int viewed, char genre, String id, int pic) {
+    public Books(String name, String author, int viewed, char genre, String id, int pic, String blurb, int cost) {
         this.name = name;
         this.author = author;
         this.viewed = viewed;

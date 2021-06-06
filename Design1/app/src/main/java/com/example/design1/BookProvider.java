@@ -19,7 +19,7 @@ public class BookProvider {
             "The Lung",
             "A Textbook Of Liver Disease",
             "Diseases Of The Stomach",
-            "Physiology Of The Brain",
+            "Physiology Of Behavior",
             "The Kidney",
             "Textbook of Pancreatic Cancer",
             "Diseases of the Gallbladder and Bile Ducts",
@@ -66,7 +66,7 @@ public class BookProvider {
             "Kent Pinkerton & Richard Harding",
             "David Zakim MD & Thomas D. Boyer MD",
             "Max Einhorn ",
-            "Neil R. Carlson & Melissa A. Birkett",
+            "Neil R. Carlson",
             "Peter Vize,Adrian S. Woolf, Jonathan Bard",
             "Kjetil Soreide & Stefan Stättner",
             "Pierre-Alain Clavien & John Baillie",
@@ -138,16 +138,18 @@ public class BookProvider {
                 String id = ids[i];
                 String author = authors[i];
                 String title = titles[i];
+                String description = blurbs[i];
+                int price = cost[i];
                 int coveraddr = coveraddrs[0];
                 int views = 5;
                 if (i < 10) {
-                    Books aBook = new Books(title, author, views, 'e', id, coveraddr);
+                    Books aBook = new Books(title, author, views, 'e', id, coveraddr,description,price);
                     eng.add(aBook);
                 } else if (i < 20) {
-                    Books aBook = new Books(title, author, views, 'm', id, coveraddr);
+                    Books aBook = new Books(title, author, views, 'm', id, coveraddr,description,price);
                     med.add(aBook);
                 } else {
-                    Books aBook = new Books(title, author, views, 'l', id, coveraddr);
+                    Books aBook = new Books(title, author, views, 'l', id, coveraddr,description,price);
                     law.add(aBook);
                 }
 
