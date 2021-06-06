@@ -48,8 +48,8 @@ public class BookAdapter extends ArrayAdapter<Books> {
         //Populate the data into the template view using the data object
         viewHolder.tvTitle.setText(book.getTitle());
         viewHolder.tvAuthor.setText(book.getAuthor());
-        int resID = book.getCoverImage();
-        viewHolder.ivCover.setImageResource(resID);
+        int[] imageIDs = book.getCoverImage();
+        viewHolder.ivCover.setImageResource(imageIDs[1]);
         return convertView;
     }
 }
